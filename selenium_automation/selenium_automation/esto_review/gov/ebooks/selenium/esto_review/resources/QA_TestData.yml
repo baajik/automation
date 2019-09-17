@@ -1,0 +1,10 @@
+baseUrl: https://nasa-ebooks-qa.amer.reisystems.com/
+loginUrl: https://nasa-ebooks-qa.amer.reisystems.com/review/login
+
+users:
+  adminUser: 
+    username: ssystem
+    password: review_qa
+  incorrectUserName: tester
+  incorrectPassword: ersqa
+

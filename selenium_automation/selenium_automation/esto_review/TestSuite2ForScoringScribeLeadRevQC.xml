@@ -1,0 +1,69 @@
+<suite name= "TestSuite2ForScoringScribeLeadRevQC">
+
+<test name = "Test4_Scoring_VerificationOfLiveScoringTest">
+	  <classes>
+	  // **Panel Member >> Verify the web socket is connected (The green dot) >> Verify Scoring-up is displayed 
+	  // (Verify the Proposal number on the pop, Submit and Abstain buttons available) >> Enter the score and Submit (Go back to the Super User browser)
+	  // Verify that no Submit button is available once, Score ends/Stopped and text as “Final Score: “ is displayed
+	  // Log out as Panel member
+	  
+	  //**Projector >> Verify the web socket is connected (The green dot) >> Verify that Projector sees the pop-up box with timer
+	  // Verify that once Super User ends the scoring -- message displaying that "Finished Scoring"
+	  // Verify that summary of scoring is displaying with Average Score, Variance Score, Deviation Score, Adjectavel Rating
+	  // Log out as Projector
+	  
+	 //**Super User >> Verify that Manage Panel Scoring link is available >> Open the link -> Verify the Manage Panel scoring window 
+	 // (such as 2 mins, Panel member and Start/Stop Scoring buttons) >> Start Scoring (Go back to Panel member browser)
+	 // Verify the Panel member is moved to Scored section and wait until 2 mins completed or do Stop scoring (Cover both scenarios)
+	 // If Stop scoring  : Timer needs to stop at the time you ended  >> If ends : Timers needs to show as 2:00
+	 // Navigate to Panel member browser 
+	 // Log out as Admin user
+	  
+	 		<class name = "gov.ebooks.selenium.esto_review.tests.Scoring_VerificationOfLiveScoringTest"/>
+	 </classes>
+	 </test>
+	 
+	 
+<test name = "//Scribe">
+		<classes>
+		// 11. Functionality of Scribe >> Checking out to Lead Reviewer
+		// Login as Scribe, Open the scribe notes and check out to Lead Reviewer 
+		// Verify the version is updated
+		// Verify the View Evaluation Link
+		<class name = "gov.ebooks.selenium.esto_review.tests.ScribeTest"/>
+		</classes>
+	</test>
+	
+	
+	<test name = "//Lead Reviewer">
+		<classes>
+		// 12. Functionality of Lead Reviewer >> enter comments and check out to Quality Control
+		// Login as Lead Reviewer, Open the Update Evaluation 
+		// Verify all the Proposal Summary, Comments, factors text boxes are editable
+		// Verify the scoring window are non-editable
+		// Verify Scribe Notes is not editable
+		// Check out to Quality Control and Submit 
+		// Verify Version is created
+		// Log out as Lead reviewer
+		<class name = "gov.ebooks.selenium.esto_review.tests.LeadReviewerTest"/>
+		</classes>
+	</test>
+
+
+	<test name = "Quality Control">
+		<classes>
+		// 13.  Functionality of Quality Control >> enter comments and check out to Panel
+		// Login as Quality Control, Open Quality Control comments link
+		// Verify all the Proposal Summary, Comments, factors text boxes are editable
+		// Verify the scoring window are non-editable
+		// Verify Scribe Notes is not editable
+		// Check out to Panel Official and Submit
+		// Verify Version is created
+		// Log out as Quality Control
+			
+		<class name = "gov.ebooks.selenium.esto_review.tests.QualityControlTest"/>
+		</classes>
+	</test>
+	
+
+</suite>

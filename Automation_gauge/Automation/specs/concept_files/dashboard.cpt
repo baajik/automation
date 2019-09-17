@@ -1,0 +1,10 @@
+Created by erlan.beisen on 8/26/19
+# Navigate to Dashboard page as Contract Auditor
+* Navigate to Login page
+* Sign in as Contract Auditor
+* Validate User Dashboard
+* Click Dashboard link
+
+# Validate NOC on Dashboard page
+* Validate NOC Data on Dashboard page table
+* Validate NOC on DRN Summary modal window

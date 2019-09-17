@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="HEC Automated Tests" preserve-order="true" thread-count="1">
+	
+	
+		
+	<test name="HEC login Feature">
+		<classes>
+			<class name="gov.ers.hec.automation.tests.HEC_Login_Test"/>
+			<class name="gov.ers.hec.automation.tests.NonSMD_Test"/>
+			<class name="gov.ers.hec.automation.tests.SMDRoses_Test"/>
+			<class name="gov.ers.hec.automation.tests.SMDNonRoses_Test"/>
+			<class name="gov.ers.hec.automation.tests.SMDComputingRequest_Test"/>
+			<class name="gov.ers.hec.automation.tests.ModificationRequest_Test"/>
+			
+		</classes>
+	</test>
+	
+	
+		
+	
+  
+</suite>

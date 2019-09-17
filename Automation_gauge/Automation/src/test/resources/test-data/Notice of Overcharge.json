@@ -1,0 +1,46 @@
+{
+  "Submit NOC" : {
+    "Notice of Overcharge Form" : {
+      "Receivable Data Entry" : {
+        "Document Reference Number" : "random",
+        "Carrier Bill Number" : "random",
+        "SCAC" : "random",
+        "Agency Code" : "random",
+        "Special Issue Code" : "random",
+        "IATA Code" : "random"
+      },
+      "Auditor Data" : {
+        "Auditor Number" : "random",
+        "Time Spent By Auditor" : "random",
+        "Audit Company" : "random",
+        "Prepayment Auditor" : "random",
+        "Date E-Bill Created" : "random"
+      },
+      "Overcharge Data" : {
+        "Should Be Amount" : "random",
+        "Amount Paid" : "random",
+        "Overcharge Amount" : "",
+        "Overcharge Type" : "random",
+        "Foreign Currency" : "No",
+        "Date Bill Paid" : "random",
+        "Date Invoice Received" : "random"
+      },
+      "Routing" : {
+        "Origin City" : "random",
+        "Origin State" : "random",
+        "Origin Country" : "USA",
+        "Destination City" : "random",
+        "Destination State" : "random",
+        "Destination Country" : "USA",
+        "Shipping Date" : "random",
+        "Mode" : "random",
+        "GTR/GBL Indicator" : "random",
+        "Ship Specific Reference" : "random",
+        "Additional Routing Information" : "random"
+      },
+      "Basis" : {
+        "Basis And Authority" : "random"
+      }
+    }
+  }
+}

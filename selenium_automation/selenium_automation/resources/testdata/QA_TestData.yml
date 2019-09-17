@@ -1,0 +1,10 @@
+baseUrl: https://nasa-ebooks-qa.amer.reisystems.com/
+loginUrl: https://nasa-ebooks-qa.amer.reisystems.com/hec_qa/computing/index.do
+
+users:
+  adminUser: 
+    username: ssystem
+    password: ers_qa
+  incorrectUserName: tester
+  incorrectPassword: ersqa
+

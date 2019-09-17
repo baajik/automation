@@ -1,0 +1,19 @@
+Created by erlan.beisen on 8/26/19
+# Validate NOC on DRN Summary modal window
+* Click DRN link
+* Validate DRN-Details on DRN Summary modal window
+* Validate DRN-Audit Log on DRN Summary modal window
+* Validate DRN-Workflow Log on DRN Summary modal window
+* Close modal window
+
+# Validate DRN-Details on DRN Summary modal window
+* Click DRN-Details Link on DRN Summary Window
+* Validate DRN-Details on DRN Summary Window
+
+# Validate DRN-Audit Log on DRN Summary modal window
+* Click DRN-Audit Log Link on DRN Summary Window
+* Validate DRN-Audit Log on DRN Summary Window
+
+# Validate DRN-Workflow Log on DRN Summary modal window
+* Click DRN-Workflow Log Link on DRN Summary Window
+* Validate DRN-Workflow Log on DRN Summary Window

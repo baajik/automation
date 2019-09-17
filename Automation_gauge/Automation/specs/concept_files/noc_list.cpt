@@ -1,0 +1,9 @@
+# Navigate to NOC List page as Contract Auditor
+* Navigate to Login page
+* Sign in as Contract Auditor
+* Validate User Dashboard
+* Click NOC List link
+
+# Validate submitted NOC on NOC List page
+* Validate submitted NOC Data on NOC List page table
+* Validate NOC on DRN Summary modal window

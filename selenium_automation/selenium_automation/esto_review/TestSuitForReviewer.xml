@@ -1,0 +1,120 @@
+<suite name="TestSuiteForESTO_ReviewSystem">
+					// ***** Critical Note*** :  
+				//**** Pre-requisite: Login as Admin User 
+				// Find user (Reviewer) who have not logged in to the system (User should be first time user who is login in to the system and has not setup the profile yet)
+				// Assign proposal to same Reviewer.
+				// Assign Ann Legall as Admin User
+				// Assign Abhishek Dubey as a Reviewer
+				// Remove all the Roles from the Proposal like Panel Member, Scribe, Lead Reviewer, Panel Official, Program Manager
+				// Proposal Stage should be in Mail-In stage. (note** ReviewerUpdateReviewTest.java has same proposal that reviewer is starting)
+		
+	<test name = "Test 1 _ Register User + Enforce Profile SetUp + Forgot Password + Reviewer Document Links + Review of Proposal and score">
+		<classes>	
+		
+		// Test 1.1**** Register User, Assing Propsal, connect to DataBase and find Username
+			<class name = "gov.ebooks.selenium.esto_review.tests.RegisterNewUserAssignProposalTest"/>
+		
+		// Test 1.2*** Enforce Initial login (enforce update profile, enforce change password, enforce security question, enforce complete NDA)
+			<class name = "gov.ebooks.selenium.esto_review.tests.InitialUserAccountProfileSetupTest"/>
+		
+		// Test 1.3*** Forgot Password
+			<class name = "gov.ebooks.selenium.esto_review.tests.LoginVerificationTest"/>
+		
+		// Test 1.4***  Reviewer _ Verify the proposal links (Open the review form, Click on all the links) 
+			<class name = "gov.ebooks.selenium.esto_review.tests.ReviewerAccessOfProposalLinksTest"/>
+		
+		// Test 1.5***  Reviewer _ Enter all the factors text and scoring and submit + Verify the Status, Average Score and Adjectival rating
+			<class name = "gov.ebooks.selenium.esto_review.tests.ReviewerUpdateReviewTest"/>
+			
+		</classes>
+	</test>
+
+	<test name = "Test 2 _ AdminUserRegressionTest">
+		<classes>
+		// *** Functionality of Admin User
+		// Login in as an Admin User 
+		// 1. Move the proposal Stage to Pre-panel; 
+		// 2. Assign Panel Members, Scribe, Lead reviewer, Panel Official and Program manager;
+		// 3. Manage Proposals, Move the stage of the proposal from pre-panel to scribe
+		// Logout as Admin User 
+		<class name = "gov.ebooks.selenium.esto_review.tests.AdminUserRegressionTest"/>
+		</classes>
+	</test>
+	
+	<test name = "Test 3 _ ScribeRegressionTest">
+		<classes>
+		// ***  Login in as an Scribe 
+		// 1. Verify the proposal section (Such as the stages with roles assigned and also, the links scribe sees)
+        // 2. Open the Scribe notes link, provide scribe notes
+		// Logout as Scribe 
+		<class name = "gov.ebooks.selenium.esto_review.tests.ScribeRegressionTest"/>
+		</classes>
+	</test>	
+	
+	
+	<test name = "Test4_Scoring_VerificationOfLiveScoringTest">
+	  <classes>
+	  // ***  Scoring Verification 
+	  // **Panel Member >> Verify the web socket is connected (The green dot) >> Verify Scoring-up is displayed 
+	  // (Verify the Proposal number on the pop, Submit and Abstain buttons available) >> Enter the score and Submit (Go back to the Super User browser)
+	  // Verify that no Submit button is available once, Score ends/Stopped and text as “Final Score: “ is displayed
+	  // Log out as Panel member
+	  
+	  //**Projector >> Verify the web socket is connected (The green dot) >> Verify that Projector sees the pop-up box with timer
+	  // Verify that once Super User ends the scoring -- message displaying that "Finished Scoring"
+	  // Verify that summary of scoring is displaying with Average Score, Variance Score, Deviation Score, Adjectavel Rating
+	  // Log out as Projector
+	  
+	 //**Super User >> Verify that Manage Panel Scoring link is available >> Open the link -> Verify the Manage Panel scoring window 
+	 // (such as 2 mins, Panel member and Start/Stop Scoring buttons) >> Start Scoring (Go back to Panel member browser)
+	 // Verify the Panel member is moved to Scored section and wait until 2 mins completed or do Stop scoring (Cover both scenarios)
+	 // If Stop scoring  : Timer needs to stop at the time you ended  >> If ends : Timers needs to show as 2:00
+	 // Navigate to Panel member browser 
+	 // Log out as Admin user
+	  
+	 		<class name = "gov.ebooks.selenium.esto_review.tests.Scoring_VerificationOfLiveScoringTest"/>
+	 </classes>
+	 </test>
+
+<test name = "Test 5_Scribe">
+		<classes>
+		//***  Functionality of Scribe >> Checking out to Lead Reviewer
+		// Login as Scribe, Open the scribe notes and check out to Lead Reviewer 
+		// Verify the version is updated
+		// Verify the View Evaluation Link
+		<class name = "gov.ebooks.selenium.esto_review.tests.ScribeTest"/>
+		</classes>
+	</test>
+	
+	
+	<test name = "Test 6 _Lead Reviewer">
+		<classes>
+		// ***  Functionality of Lead Reviewer >> enter comments and check out to Quality Control
+		// Login as Lead Reviewer, Open the Update Evaluation 
+		// Verify all the Proposal Summary, Comments, factors text boxes are editable
+		// Verify the scoring window are non-editable
+		// Verify Scribe Notes is not editable
+		// Check out to Quality Control and Submit 
+		// Verify Version is created
+		// Log out as Lead reviewer
+		<class name = "gov.ebooks.selenium.esto_review.tests.LeadReviewerTest"/>
+		</classes>
+	</test>
+
+
+	<test name = "Test 7_ Quality Control">
+		<classes>
+		//***   Functionality of Quality Control >> enter comments and check out to Panel
+		// Login as Quality Control, Open Quality Control comments link
+		// Verify all the Proposal Summary, Comments, factors text boxes are editable
+		// Verify the scoring window are non-editable
+		// Verify Scribe Notes is not editable
+		// Check out to Panel Official and Submit
+		// Verify Version is created
+		// Log out as Quality Control
+			
+		<class name = "gov.ebooks.selenium.esto_review.tests.QualityControlTest"/>
+		</classes>
+	</test>
+
+</suite>
